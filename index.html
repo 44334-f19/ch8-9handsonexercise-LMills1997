@@ -1,13 +1,169 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Mills Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
+            table {margin: 20px;
+                   border: 5px solid #0f5224;
+                   border-spacing: 0;
+                   background-color: #BBF9B5;
+                   padding-top: 10px;}
+            tr {padding: 1em;}
+            td {padding: 10px;}
+            td:nth-child(1) {font-weight: bold;}
+            caption {font-size: 20px;
+                     font-weight: bold;}
+            h1 {text-align: center;}
+            #wrapper {display: flex;
+                      flex-direction: row;}
+            form {background-color: #BBF9B5;
+                  padding: 10px;
+                  min-width: 400px;}
+            fieldset {border: 5px solid #0f5224;
+                      padding: 10px;}
+            input[type="radio"], input[type="checkbox"] {display: inline;}
+            legend {font-size:20px;}
+        
+            
 		
 		</style>
 	</head> 
 <body> 
+    <table>
+        <caption>My Favorite Movie</caption>
+
+        <thead>
+            <tr>
+                <th id="mi"><h3>Film Info</h3></th>
+                <th id="d"><h3>Movie Specific Details</h3></th>
+            </tr>
+        </thead>
+
+        <br>
+        <tbody>
+                <tr>
+                    <td headers="mi">Movie Title:</td>
+                    <td headers="d">Labyrinth</td>
+                </tr>
+            
+                <tr>
+                    <td headers="mi">Director:</td>
+                    <td headers="d">Jim Henson</td>
+                </tr>
+            
+                <tr>
+                    <td headers="mi">Leading Actor:</td>
+                    <td headers="d">David Bowie</td>
+                </tr>
+            
+                <tr>
+                    <td headers="mi">Leading Actress:</td>
+                    <td headers="d">Jennifer Connelly</td>
+                </tr>
+            
+                <tr>
+                    <td headers="mi">Rating:</td>
+                    <td headers="d">PG</td>
+                </tr>
+            
+                <tr>
+                    <td headers="mi">Description:</td>
+                    <td headers="d">A teenage girl, Sarah, wishes for her baby brother to be taken away by the Goblin King. Now she must cross a labyrinth to get him back before time runs out.</td>
+                </tr>
+            
+                <tr>
+                    <td headers="mi">Movie Review:</td>
+                    <td headers="d"><a href="https://www.empireonline.com/movies/reviews/labyrinth-review/">Review by Empire Magazine</a></td>
+                </tr>
+        </tbody>
+    </table>
+    
+    <br>
+    
+    <h1>Music Survey</h1>
+    <form method="post">
+        <div id="wrapper">
+            <fieldset id="nameEmail">
+                
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Your first and last name"> 
+                <br><br>
+                
+                <label for="email">E-Mail:</label>
+                <input type="email" name="email" id="email" placeholder="you@yourdomain.com">
+                
+            </fieldset>
+            
+            <br>
+            
+             <fieldset id="musicHabits">
+                 
+                <legend>Listening Habits</legend>
+                How much time do you spend a day listening to music?<br>
+                
+                <input type="radio" name="musictime" id="0" value="0"> I do not listen to music <br>
+                <input type="radio" name="musictime" id="1-2" value="1to2"> 1 to 2 hours <br>
+                <input type="radio" name="musictime" id="3-4" value="3to4"> 3 to 4 hours <br>
+                <input type="radio" name="musictime" id="5+" value="5more"> 5 or more hours <br>
+                 
+                <br>
+                How many days a week do you listen to music? <br>
+                
+                <input type="radio" name="musicdays" id="none" value="none"> I do not listen to music <br>
+                <input type="radio" name="musicdays" id="1-2d" value="1to2d"> 1 to 2 days a week <br>
+                <input type="radio" name="musicdays" id="3-4d" value="3to4d"> 3 to 4 days a week <br>
+                <input type="radio" name="musicdays" id="5+d" value="5mored"> 5 or more days a week <br>
+                
+                <br>
+                How do you listen to most of your music? <br>
+                
+                <select size="3" name="app" id="app">
+                    <option value="itunesGoogle">iTunes or Google Music</option>
+                    <option value="pandora">Pandora</option>
+                    <option value="youtube">Youtube</option>
+                    <option value="spotify">Spotify</option>
+                    <option value="soundcloud">Soundcloud</option>
+                    <option value="radio">Radio</option>
+                </select>
+            
+            </fieldset>
+            
+            <br>
+            
+            <fieldset id="musicTaste">
+                
+                <legend>Music Tastes</legend>
+                What genres of music do you listen to? <br>
+                
+                <input type="checkbox" name="genre" id="a" value="alternative"> Alternative <br>
+                <input type="checkbox" name="genre" id="c" value="country"> Country <br>
+                <input type="checkbox" name="genre" id="e" value="electronic"> Electronic <br>
+                <input type="checkbox" name="genre" id="p" value="pop"> Pop <br>
+                <input type="checkbox" name="genre" id="r" value="rock"> Rock <br>
+                <input type="checkbox" name="genre" id="rap" value="rap"> Rap <br>
+                
+                <br>
+                What artists do you listen to? <br>
+                <textarea name="artist" id="artists" rows="3" cols="60"></textarea>
+                <br>
+                <br>
+                
+                <input id="surveySubmit" type="submit" value="Submit">
+                <br><br>
+                <input id="surveyreset" type="reset" value="Reset">
+                
+            </fieldset>
+        
+        </div>
+    
+    
+    </form>
+    
+    
+    
+    
+    
 
 </body> 
 </html> 
